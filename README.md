@@ -18,3 +18,6 @@ This app connects to a instance of MongoDB Atlas
 ## Time
 30 min
 1 hour
+30 min
+30 min
+20 min
