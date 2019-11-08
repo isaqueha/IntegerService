@@ -1,24 +1,28 @@
 const IntegerModel = require('../models/Integer')
 
-// index, show, store, update, destroy
-
 module.exports = {
-	async show(req, res) {
-		let integer = await IntegerModel.findOne({});
+	async current(req, res) {
+		const { api_key } = req.headers;
+		let integer = await IntegerModel.findOne({ api_key });
+		if (!integer) {
+			return res.json({ message: "No Authorization" });
+		}
 
 		return res.json({ current: integer.current });
 	},
 
-	async store(req, res) {
-		let integer = await IntegerModel.findOne({});
-
+	async next(req, res) {
+		// TODO Refactor below code
+		const { api_key } = req.headers;
+		let integer = await IntegerModel.findOne({ api_key });
 		if (!integer) {
-			integer = await IntegerModel.create({ 
-				current: 0
-			});
-		} else {
+			return res.json({ message: "No Authorization" });
+		}
+
+		if (integer) {
 			integer.current += 1;
-			await IntegerModel.update({}, { 
+			// TODO Refactor below code, duplicate
+			await IntegerModel.updateOne({ api_key }, {
 				current: integer.current
 			});
 		}
@@ -26,14 +30,21 @@ module.exports = {
 		return res.json({ current: integer.current });
 	},
 
-	async update(req, res) {
+	async updateCurrent(req, res) {
+		const { api_key } = req.headers;
+		let integer = await IntegerModel.findOne({ api_key });
+		if (!integer) {
+			return res.json({ message: "No Authorization" });
+		}
+
+		// TODO Refactor below code
 		let { current } = req.body;
 		current = parseInt(current);
-		if (current < 0) {
-			return res.json({ message: "error" });
+		if ((!current && current !== 0) || current < 0) {
+			return res.json({ message: "Invalid Value Input" });
 		}
 		
-		await IntegerModel.update({}, { 
+		await IntegerModel.updateOne({ api_key }, { 
 			current
 		});
 		
