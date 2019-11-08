@@ -2,8 +2,6 @@ const User = require('../models/User')
 const IntegerModel = require('../models/Integer')
 const hasher = require('../util/Hasher');
 
-// index, show, store, update, destroy
-
 module.exports = {
 	async store(req, res) {
 		const { email, password } = req.body;

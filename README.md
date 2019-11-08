@@ -9,6 +9,13 @@ Please check `UserStory.md`.
 3. Run `npm run dev`;
 4. Open `http://localhost:3333/` and try the routes.
 
+## Routes
+get - /
+post - /user
+get - /current
+put - /current
+get - /next
+
 ## DB
 This app connects to a instance of MongoDB Atlas
 
