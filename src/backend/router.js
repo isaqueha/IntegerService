@@ -11,9 +11,9 @@ router.get('/', (req, res) => {
 });
 
 router.post('/user', SessionController.store);
-router.get('/current', IntegerController.show);
-router.put('/current', IntegerController.update);
-router.get('/next', IntegerController.store);
+router.get('/current', IntegerController.current);
+router.put('/current', IntegerController.updateCurrent);
+router.get('/next', IntegerController.next);
 
 // Render the docs at /
 router.get('/docs', api.docsRequest);
