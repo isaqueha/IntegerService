@@ -16,8 +16,6 @@ let registry = new API.ResourceTypeRegistry({
 	}
 });
 
-// TODO Use JSON API
-
 const opts = { host: 'famTree@famtree-y6fg2.mongodb.net' };
 
 let api = new API.httpStrategies.Express(
