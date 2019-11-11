@@ -7,7 +7,7 @@ Please check `UserStory.md`.
 1. Clone this repository;
 2. Run `npm install`;
 3. Run `npm run dev`;
-4. Open `http://localhost:5000/` and try the routes.
+4. Open `http://localhost:3333/` and try the routes.
 
 ## Routes
 
@@ -15,17 +15,17 @@ Please check `UserStory.md`.
 [`Insomnia_2019-11-08.json`](./Insomnia_2019-11-08.json) 
 
 
-### 1. GET [`localhost:5000/`](http://localhost:5000/)
+### 1. GET [`localhost:3333/`](http://localhost:3333/)
 Root route, checks if the service is running;
 
-### 2. POST [`localhost:5000/user`](http://localhost:5000/user)
+### 2. POST [`localhost:3333/user`](http://localhost:3333/user)
 Creates an user based on `email` and `password`, returning `api_key` to be used as auth.
 
-### 3. GET [`localhost:5000/current`](http://localhost:5000/current)
+### 3. GET [`localhost:3333/current`](http://localhost:3333/current)
 
-### 4. PUT [`localhost:5000/current`](http://localhost:5000/current)
+### 4. PUT [`localhost:3333/current`](http://localhost:3333/current)
 
-### 5. GET [`localhost:5000/next`](http://localhost:5000/next)
+### 5. GET [`localhost:3333/next`](http://localhost:3333/next)
 
 
 ## Dependencies

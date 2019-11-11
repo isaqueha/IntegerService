@@ -14,7 +14,11 @@ app.use(cors());
 app.use(express.json());
 app.use(router);
 
-app.listen(5000);
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3333;
+}
+app.listen(port);
 
 // TODO Deploy API
 // Link in README
