@@ -11,9 +11,9 @@ router.get('/', (req, res) => {
 });
 
 router.post('/user', SessionController.store);
-router.get('/current', IntegerController.current);
-router.put('/current', IntegerController.updateCurrent);
-router.get('/next', IntegerController.next);
+router.get('/current', IntegerController.auth, IntegerController.current);
+router.put('/current', IntegerController.auth, IntegerController.validateInput, IntegerController.updateCurrent);
+router.get('/next', IntegerController.auth, IntegerController.next);
 
 router.get('/docs', api.docsRequest);
 
