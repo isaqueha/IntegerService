@@ -17,6 +17,6 @@
     "json-api": "^3.0.0-rc.6.0.1"
   },
   "devDependencies": {
-    "nodemon": "^1.19.3"
+    "nodemon": "^1.19.4"
   }
 }
