@@ -8,7 +8,7 @@ https://integerservice.herokuapp.com/
 ## Installation
 1. Clone this repository;
 2. Run `npm install`;
-3. Run `npm run dev`;
+3. Run `npm start`;
 4. Open `http://localhost:3333/` and try the routes.
 
 ## Routes
@@ -23,8 +23,8 @@ Root route, checks if the service is running;
 ### 2. POST [`localhost:3333/user`](http://localhost:3333/user)
 Creates an user based on `email` and `password` parameters passed as a JSON object in the request Body.
 Returns an `api_key` to be used for auth and for selecting the user's "integer counter".
-Example:
 
+Example Body:
 ```
 {
 	"email": "email@email.com",
@@ -32,15 +32,66 @@ Example:
 }
 ```
 
-The password is not stored, but rather, hashed by the `crypto` Node module inside the [`Hasher.js` file](./src/backend/util/Hasher.js) 
+The password is not stored, but rather, hashed by the `crypto` Node module inside the [`Hasher.js` file](./src/util/Hasher.js) 
 
 ### 3. GET [`localhost:3333/current`](http://localhost:3333/current)
-// TODO
+Returns the current Integer value for the given user.
+The API Key for the user should be passed in the request Headers in order to fetch the correct value.
+If an invalid API Key is passed, the service returns an error message.
+
+Example header:
+```
+api_key: dafgfl=
+```
+
+Example return:
+```
+{
+  "current": 12
+}
+```
 
 ### 4. PUT [`localhost:3333/current`](http://localhost:3333/current)
+Modifies the current Integer value for the given user.
+A `current` value should be passed as a JSON object in the request Body.
+The API Key for the user should be passed in the request Headers in order to fetch the correct value.
+If an invalid API Key or invalid number is passed, the service returns an error message.
+
+Example Body:
+```
+{
+	"current": 23
+}
+```
+
+Example header:
+```
+api_key: dafgfl=
+```
+
+Example return:
+```
+{
+  "current": 23
+}
+```
 
 ### 5. GET [`localhost:3333/next`](http://localhost:3333/next)
+Returns the next Integer value for the given user, altering the value for the current integer.
+The API Key for the user should be passed in the request Headers in order to fetch the correct value.
+If an invalid API Key is passed, the service returns an error message.
 
+Example header:
+```
+api_key: dafgfl=
+```
+
+Example return:
+```
+{
+  "current": 24
+}
+```
 
 ## Dependencies
 
@@ -64,12 +115,15 @@ CORS is used here for Cross-Origin Resource Sharing (CORS) to avoid issues when 
 
 ### TDD
 The approach used was plain feature development.
-As TDD is a main 
+Test Driven Development (TDD) was not used here for simplicity and little previous experience reasons.
 
 ### Demo MongoDB
-// TODO
+This application uses a personal Demo MongoDB Atlas instance. 
+A different approach like a DB service or application would better if there was more time available.
 
-### Authotization
+### Authorization
+The API Keys are generated with the User`s password and conventional Crypto functions.
+For an improved and more secure service, advanced Authorization and Security approaches should be used. 
 
 
 ## Time
@@ -79,5 +133,6 @@ As TDD is a main
 30 min
 30 min
 30 min
+30 min
 
-Total: 3:30
+Total: 4:00
