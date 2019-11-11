@@ -14,16 +14,10 @@ app.use(cors());
 app.use(express.json());
 app.use(router);
 
-app.listen(3333);
+app.listen(8080);
 
-// TODO Update Readme
-	// Installation
-	// Dependencies
-	// Usage
-	// Limitations
-	
 // TODO Deploy API
-	// Link in README
+// Link in README
 	// SCP? GCP? HERUGO?
 	
 // TODO Create UI
@@ -35,5 +29,11 @@ app.listen(3333);
 	
 // TODO Allow sign up using OAuth
 	// GitHub or Google
+	
+// TODO Update Readme
+	// Installation
+	// Dependencies
+	// Usage
+	// Limitations
 
 // TODO JSON API spec
