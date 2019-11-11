@@ -19,10 +19,6 @@ if (port == null || port == "") {
   port = 3333;
 }
 app.listen(port);
-
-// TODO Deploy API
-// Link in README
-	// SCP? GCP? HERUGO?
 	
 // TODO Create UI
 	// Account creation
