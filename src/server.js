@@ -20,13 +20,6 @@ if (port == null || port == "") {
 }
 app.listen(port);
 	
-// TODO Create UI
-	// Account creation
-	// Integer monitoring
-	// Next Button
-	// Change current Button
-	// Save API_KEY in cookies
-	
 // TODO Allow sign up using OAuth
 	// GitHub or Google
 	
