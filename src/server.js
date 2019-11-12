@@ -8,7 +8,7 @@ mongoose.connect('mongodb+srv://famTree:famTree@famtree-y6fg2.mongodb.net/famTre
 	useUnifiedTopology: true
 });
 
-var app = express();
+let app = express();
 
 app.use(cors());
 app.use(express.json());
@@ -19,7 +19,3 @@ if (port == null || port == "") {
   port = 3333;
 }
 app.listen(port);
-
-// TODO refactor UI Code
-
-// TODO JSON API spec

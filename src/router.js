@@ -1,5 +1,4 @@
 const express = require('express');
-const api = require('./jsonApi');
 
 const IntegerController = require('./controllers/IntegerController');
 const SessionController = require('./controllers/SessionController');
@@ -14,7 +13,5 @@ router.post('/user', SessionController.store);
 router.get('/current', IntegerController.auth, IntegerController.current);
 router.put('/current', IntegerController.auth, IntegerController.validateInput, IntegerController.updateCurrent);
 router.get('/next', IntegerController.auth, IntegerController.next);
-
-router.get('/docs', api.docsRequest);
 
 module.exports = router;

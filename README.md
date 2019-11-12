@@ -134,6 +134,9 @@ A different approach like a DB service or application would better if there was 
 The API Keys are generated with the User`s password and conventional Crypto functions.
 For an improved and more secure service, advanced Authorization and Security approaches should be used. 
 
+### JSON API Spec
+The service implements only part of the JSON API Spec.
+Some tests were conducted with the [JSON API Serializer](https://github.com/SeyZ/jsonapi-serializer), but there was no more time available to continue implementing it.
 
 ## Time
 30 min
@@ -144,5 +147,7 @@ For an improved and more secure service, advanced Authorization and Security app
 30 min
 30 min
 1 hour
+30 min
+30 min
 
-Total: 5:00
+Total: 6:00h

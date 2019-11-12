@@ -13,7 +13,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "json-api": "^3.0.0-rc.6.0.1",
     "mongoose": "^5.7.8",
     "nodemon": "^1.19.4"
   }
