@@ -3,6 +3,9 @@
 The UI application for this service can be found at:
 https://github.com/isaqueha/IntegerUI
 
+## Time taken
+Around 6 hours
+
 ## Running
 This application can be found running at:
 https://integerservice.herokuapp.com/
@@ -137,17 +140,3 @@ For an improved and more secure service, advanced Authorization and Security app
 ### JSON API Spec
 The service implements only part of the JSON API Spec.
 Some tests were conducted with the [JSON API Serializer](https://github.com/SeyZ/jsonapi-serializer), but there was no more time available to continue implementing it.
-
-## Time
-30 min
-1 hour
-30 min
-30 min
-30 min
-30 min
-30 min
-1 hour
-30 min
-30 min
-
-Total: 6:00h
