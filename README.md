@@ -1,11 +1,22 @@
 # Incrementing Integers As A Service
 
+The UI application for this service can be found at:
+https://github.com/isaqueha/IntegerUI
+
 ## Running
 This application can be found running at:
 https://integerservice.herokuapp.com/
 
+You can try the service with the following routes:
 
-## Installation
+1. GET [`integerservice.herokuapp.com/`](https://integerservice.herokuapp.com/)
+2. POST [`integerservice.herokuapp.com/user`](https://integerservice.herokuapp.com/user)
+3. GET [`integerservice.herokuapp.com/current`](https://integerservice.herokuapp.com/current)
+4. PUT [`integerservice.herokuapp.com/current`](https://integerservice.herokuapp.com/current)
+5. GET [`integerservice.herokuapp.com/next`](https://integerservice.herokuapp.com/next)
+
+
+## Local Installation
 1. Clone this repository;
 2. Run `npm install`;
 3. Run `npm start`;
@@ -108,9 +119,6 @@ Makes Modeling and Connecting MongoDB easier.
 ### CORS
 CORS is used here for Cross-Origin Resource Sharing (CORS) to avoid issues when communicating between different running applications.
 
-### JSON-Api
-// TODO
-
 ## Limitations
 
 ### TDD
@@ -134,5 +142,6 @@ For an improved and more secure service, advanced Authorization and Security app
 30 min
 30 min
 30 min
+1 hour
 
-Total: 4:00
+Total: 5:00
