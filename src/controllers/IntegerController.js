@@ -44,6 +44,7 @@ module.exports = {
 	async updateCurrent(req, res) {
 		const { api_key } = req.headers;
 		let { current } = req.body;
+		current = parseInt(current);
 
 		await updateOneInteger(api_key, current);
 		return res.json({ current });
