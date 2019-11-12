@@ -19,14 +19,7 @@ if (port == null || port == "") {
   port = 3333;
 }
 app.listen(port);
-	
-// TODO Allow sign up using OAuth
-	// GitHub or Google
-	
-// TODO Update Readme
-	// Installation
-	// Dependencies
-	// Usage
-	// Limitations
+
+// TODO refactor UI Code
 
 // TODO JSON API spec
